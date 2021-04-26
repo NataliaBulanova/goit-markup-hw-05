@@ -417,8 +417,16 @@ footer .logo {
 .project-thumb {
   position: relative;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+}
+.project-thumb::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transition: 250ms opacity linear;
 }
 .project-description {
   display: block;
@@ -436,7 +444,9 @@ footer .logo {
   transition: 250ms opacity linear;
 }
 .portfolio-link:hover .project-description,
-.portfolio-link:focus .project-description {
+.portfolio-link:focus .project-description,
+.portfolio-link:hover .project-thumb::before,
+.portfolio-link:focus .project-thumb::before {
   opacity: 1;
 }
 .portfolio-link:hover,
