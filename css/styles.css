@@ -13,8 +13,10 @@
   --icon-color: #afb1b8;
   --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1 px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --project-card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   --filter-btn-gap: 8px;
   --btn-radius: 4px;
+  --transition-param: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 html {
   box-sizing: border-box;
@@ -66,9 +68,10 @@ footer .logo {
   position: relative;
   color: var(--accent-color);
 }
-.site-nav .link.current::after {
+.link.current::after {
   position: absolute;
-  bottom: -30px;
+  bottom: -1px;
+  left: 0;
   content: "";
   display: block;
   width: 100%;
@@ -77,15 +80,20 @@ footer .logo {
   border-radius: 2px;
 }
 .link {
-  text-decoration-line: none;
+  text-decoration: none;
+  color: var(--accent-color);
 }
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--tittle-text-color);
   cursor: pointer;
+  transition: var(--transition-param);
 }
 .link.mail,
 .link.phone {
@@ -94,6 +102,7 @@ footer .logo {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  transition: var(--transition-param);
 }
 .link:hover,
 .link:focus {
@@ -125,6 +134,7 @@ footer .logo {
 }
 .icon {
   fill: var(--icon-color);
+  transition: var(--transition-param);
 }
 .container .menu {
   display: inline-flex;
@@ -133,16 +143,13 @@ footer .logo {
 .conection:not(:last-child) {
   margin-right: 50px;
 }
-.header {
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
 .header .container {
   display: flex;
-  align-items: center;
+  align-content: baseline;
 }
 .site-nav {
   margin-right: auto;
+  align-items: center;
 }
 .contact-item {
   display: flex;
@@ -152,9 +159,9 @@ footer .logo {
   margin-right: 30px;
 }
 .address-icon {
-  fill: var(--primary-text-color);
   margin-right: 10px;
   fill: currentColor;
+  transition: var(--transition-param);
 }
 .header {
   height: 80px;
@@ -205,6 +212,7 @@ footer .logo {
   letter-spacing: 0.06em;
   color: var(--white-text-color);
   background-color: var(--accent-color);
+  cursor: pointer;
 }
 .section {
   padding-top: 94px;
@@ -343,16 +351,16 @@ footer .logo {
   line-height: 1.19;
 }
 .social-links {
+  display: flex;
   justify-content: center;
 }
 .social-link {
   display: flex;
   width: 44px;
   height: 44px;
-  justify-content: center;
-  align-items: center;
   padding: 12px;
   border-radius: 50%;
+  transition: var(--transition-param);
 }
 .social-link:hover,
 .social-link:focus {
@@ -365,9 +373,11 @@ footer .logo {
 .client-link {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  transition: border var(--transition-param);
 }
 .client-icon {
   fill: var(--icon-color);
+  transition: fill var(--transition-param);
 }
 .client-link:hover,
 .client-link:focus {
@@ -394,11 +404,6 @@ footer .logo {
   width: 170px;
   height: 92px;
 }
-.social-link:hover,
-.social-link:focus {
-  color: var(--white-text-color);
-  fill: var(--accent-color);
-}
 .footer .social-link:focus,
 .footer .social-link:hover {
   background-color: var(--accent-color);
@@ -422,6 +427,7 @@ footer .logo {
   color: var(--tittle-text-color);
   background-color: var(--secondary-bg-color);
   margin-right: 8px;
+  transition: var(--transition-param);
 }
 .button:hover,
 .button:focus {
@@ -478,7 +484,7 @@ footer .logo {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
-  transition: 250ms opacity linear;
+  transition: var(--transition-param);
 }
 .project-description {
   display: block;
@@ -493,7 +499,11 @@ footer .logo {
   letter-spacing: 0.03em;
   color: var(--white-text-color);
   opacity: 0;
-  transition: 250ms opacity linear;
+  transition: var(--transition-param);
+}
+.portfolio-link {
+  display: block;
+  transition: box-shadow var(--transition-param);
 }
 .portfolio-link:hover .project-description,
 .portfolio-link:focus .project-description,
@@ -503,7 +513,7 @@ footer .logo {
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--project-card-shadow);
 }
 .footer-flexbox {
   display: flex;
@@ -517,6 +527,7 @@ footer .logo {
 }
 .footer .link {
   color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transition-param);
 }
 .footer .link:hover,
 .footer .link:focus {
@@ -549,6 +560,7 @@ footer .logo {
 }
 .footer-social-item .social-link {
   background-color: rgba(255, 255, 255, 0.1);
+  transition: var(--transition-param);
 }
 .footer-icon {
   fill: var(--white-text-color);

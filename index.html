@@ -60,7 +60,7 @@
       <section class="section-hero">
         <div class="container hero-flexbox">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+          <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!--Section Our advantages-->
@@ -584,8 +584,15 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop">
-      <div class="modal"></div>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-close-modal>
+          <svg>
+            <use href=""></use>
+          </svg>
+        </button>
+      </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
