@@ -231,7 +231,7 @@ footer .logo {
   transform: scale(1, 1);
   background-color: rgba(0, 0, 0, 0.2);
   transition: var(--modal-tr-param);
-  /* transition: background-color var(--transition-param), transform var(--transition-param), border-radius var(--transition-param), opacity var(--transition-param); */
+  /* transition: background-color var(--modal-tr-param), transform var(--modal-tr-param), border-radius var(--modal-tr-param); */
 
 }
 .backdrop.is-hidden {
