@@ -591,4 +591,10 @@ footer .logo {
 }
 .close-button-icon {
   fill: var(--logo-text-color);
+  transform: rotate(360deg);
+  transition: transform var(--transition-param);
+}
+.close-button:hover .close-button-icon,
+.close-button:focus .close-button-icon {
+  transform: rotate(0deg);
 }
