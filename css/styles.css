@@ -492,7 +492,6 @@ footer .logo {
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
   transition: transform var(--transition-param);
   transform: translateY(100%);
 }
@@ -508,7 +507,6 @@ footer .logo {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--white-text-color);
-  opacity: 0;
   transition: transform var(--transition-param);
   transform: translateY(300px);
 }
@@ -520,7 +518,6 @@ footer .logo {
 .portfolio-link:focus .project-description,
 .portfolio-link:hover .project-thumb::before,
 .portfolio-link:focus .project-thumb::before {
-  opacity: 1;
   transform: translateY(0px);
 }
 .portfolio-link:hover,
