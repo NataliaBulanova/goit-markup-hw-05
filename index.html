@@ -582,6 +582,21 @@
             </li>
           </ul>
         </div>
+        <div class="footer-sub-flexbox">
+          <form action="" class="footer-form">
+            <legend class="footer-social-title">Подпишитесь на рассылку</legend>
+            <div class="footer-flex">
+              <input class="footer-input" id="footer-mail" type="email" name="email" placeholder="E-mail">
+              <!-- <label class="footer-label" for="footer-mail">E-mail</label> -->
+              <div class="footer-button">
+                <button class="footer-sub-but" type="submit">Подписаться</button>
+                <svg class="icon footer-icon icon-send" width="24px" height="24px">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -591,8 +606,51 @@
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
-        <p class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In molestiae autem at earum minus sequi hic aperiam quo doloremque facere veniam voluptates non porro itaque, accusamus id nisi delectus debitis suscipit unde odit similique deleniti. Quis modi porro maiores aut maxime enim ab cum odio assumenda. Repudiandae odit eligendi labore alias ut minima quibusdam assumenda vero ab quam mollitia eaque ullam quo, quae esse iusto eveniet similique ipsam! Voluptatibus ratione eaque magnam numquam, ea quis corrupti ad quo eos dolorum error facilis molestiae debitis unde minima vitae minus quidem accusantium incidunt laudantium dolorem veniam explicabo velit natus? Atque, autem ipsum.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, earum? Enim explicabo fugit inventore sed.</p>
-
+        <form class="form">
+          <legend class="legend">Оставьте свои данные, мы вам перезвоним</legend>
+          <div>
+            <label class="form-label" for="username">
+              Имя            
+            </label>
+            <div class="mod-div">              
+              <input class="modal-input" type="text" name="username" id="username" autofocus/>
+              <svg class="form-icon" width="18px" height="18px">
+                <use href="./images/sprite.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div>          
+            <label class="form-label" for="tel">Телефон</label>
+            <div class="mod-div">              
+              <input class="modal-input" type="tel" name="tel" id="tel">
+              <svg class="form-icon" width="18px" height="18px">
+                <use href="./images/sprite.svg#icon-phone-tube"></use>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <label class="form-label" for="email">Почта</label>
+            <div class="mod-div">              
+              <input class="modal-input" type="email" name="email" id="email" />
+              <svg class="form-icon" width="18px" height="18px">
+                <use href="./images/sprite.svg#icon-email"></use>
+              </svg>
+            </div>             
+          </div>
+          <div>       
+            <label class="form-label" for="comment">Комментарий</label>
+            <textarea class="modal-input comment-input" id="comment" name="feedback" rows="5" resize="vertical" placeholder="Введите текст"></textarea>
+          </div>
+          <div class="checkbox-area">
+            <input class="checkbox" id="checkbox" type="checkbox" name="agreement" value="agree">
+            <label class="checkbox-text" for="checkbox">              
+              Соглашаюсь с рассылкой и принимаю<a href="" class="link checkbox-link">Условия договора</a>
+            </label>
+          </div>
+          <div class="sub-button-cent">
+            <button class="submit-button" type="submit">Отправить</button>
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
